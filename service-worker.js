@@ -7,6 +7,8 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', (event) => {
+  // Force the waiting service worker to become the active service worker
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -29,6 +31,9 @@ self.addEventListener('fetch', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
+  // Claim clients immediately so the controller is active on first load
+  event.waitUntil(self.clients.claim());
+  
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys().then((cacheNames) => {

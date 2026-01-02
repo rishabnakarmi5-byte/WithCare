@@ -3,17 +3,17 @@
   "name": "BridgeTheGap AI",
   "icons": [
     {
-      "src": "https://picsum.photos/192/192",
+      "src": "https://placehold.co/192x192/0ea5e9/ffffff?text=BG",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://picsum.photos/512/512",
+      "src": "https://placehold.co/512x512/0ea5e9/ffffff?text=BG",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#0ea5e9",
   "background_color": "#f8fafc"
